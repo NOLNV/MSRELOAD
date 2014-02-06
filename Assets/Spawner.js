@@ -12,7 +12,7 @@ InvokeRepeating("Spawn", 0, frequency);
 
 
 function Spawn (){
-	if (activated == true);{
+	if (activated == true){
 	Instantiate(Child, transform.position, Quaternion.identity);
 	}
 }
