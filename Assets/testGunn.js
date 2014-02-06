@@ -6,6 +6,7 @@ var owner: Transform;
 var ROF: float = 0.1;
 var nextshot: float = 0.0;
 var gunfire: ParticleSystem;
+var damage: int;
 
 function Start () {
 
@@ -22,5 +23,10 @@ function Update () {
 		audio.Play();
 		nextshot = Time.time + ROF;
 		gunfire.Emit(1);
+				
+				}
+			}
+		
+function OnParticleCollision (other : GameObject) {
+		other.collider.SendMessage("ApplyDamage", damage); 
 	}
-}

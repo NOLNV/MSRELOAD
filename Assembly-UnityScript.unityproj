@@ -48,7 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Aiming.js" />
      <Compile Include="Assets\CAMERA.js" />
+     <Compile Include="Assets\SimpleMobAI.js" />
      <Compile Include="Assets\SmoothFollow1.js" />
+     <Compile Include="Assets\Spawner.js" />
      <Compile Include="Assets\findground.js" />
      <Compile Include="Assets\testGunn.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
