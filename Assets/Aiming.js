@@ -22,10 +22,8 @@ function Update () {	//TODO: Edge cases
 	targetmouse = hits[hits.Length-1].point;
 	//iterate through all hits
 	for(var hit in hits) {
-		distance1 = Mathf.Abs(targetmouse.y - currentposition.y);
-		distance2 = Mathf.Abs(hit.point.y - currentposition.y);
 		//if another hit is closer to the player's y coordinate, use that instead.
-		if(distance1 > distance2) {
+		if( compare(currentposition.y, targetmouse.y, hit.point.y) ) {
 			//TODO: Check for Line of Sight
 			targetmouse = hit.point;
 		}
@@ -51,6 +49,12 @@ function Update () {	//TODO: Edge cases
 
 
 
+}
+
+function compare(a:float, b:float, c:float) {
+	distance1 = Mathf.Abs(b - a);
+	distance2 = Mathf.Abs(c - a);
+	return distance1 > distance2;
 }
 
 function getRaycastArray() {	//TODO: Ignore self
