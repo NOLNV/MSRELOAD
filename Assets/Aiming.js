@@ -2,49 +2,53 @@
 
 var debuggyyy : Transform;
 var camerapoint : Transform;
-var Midpoint : Vector3;
-var currentposition : Vector3;
-var targetmouse: Vector3;
-var point: Vector3;
-var distance1 = 0f;
-var distance2 = 0f;
-var DEBUG = false; //TODO: Encapsulate debuggyy in if statement
+var currentposition : Transform;
+
+private var targetmouse: Vector3;
+private var point: Vector3;
+
+var DEBUG = true; 
+private var LayerFilter = 1 << 10; LayerFilter = ~LayerFilter; //Ignore player mask
 
 function Start () {
 }
 
 function Update () {	//TODO: Edge cases
-	//get position
-	currentposition = transform.position;
 	//get hits trough all surfaces
 	var hits = getRaycastArray();
-	//set the mouse cursor to the last in the list
-	targetmouse = hits[hits.Length-1].point;
+	//set the mouse cursor to the first in the list
+	targetmouse = hits[0].point;
 	//iterate through all hits
 	for(var hit in hits) {
+		//set up line of sight raycast variables
+		var losHit : RaycastHit;
+		var losDir : Vector3 = hit.point - currentposition.position;
+		if (DEBUG == true) { Debug.DrawRay(currentposition.position, losDir, Color.green);}
+		
+		//Objects tagged with "Enemy" take precedence
+		if( hit.collider.CompareTag(Tags.enemy) ) {
+			if(Physics.Raycast(currentposition.position, losDir, losHit, Mathf.Infinity, LayerFilter)) {
+				if(losHit.collider.CompareTag(Tags.enemy)) {
+					targetmouse = losHit.point;
+					break; //Breaks the loop
+				}
+			}
+		}
+		
 		//if another hit is closer to the player's y coordinate, use that instead.
-		if( compare(currentposition.y, targetmouse.y, hit.point.y) ) {
-			//TODO: Check for Line of Sight
-			targetmouse = hit.point;
+		if( compare(currentposition.position.y, targetmouse.y, hit.point.y) ) {
+			if(Physics.Raycast(currentposition.position, losDir, losHit, Mathf.Infinity, LayerFilter)) {
+				targetmouse = losHit.point;
+			}
 		}
 	}
-	/*
-	var hit : RaycastHit;
-	if (Physics.Raycast (Camera.main.ScreenPointToRay(Input.mousePosition),  hit)) {
-						
-	targetmouse = hit.point;
-	}*/
 	
 	point = targetmouse;
-	point.y = currentposition.y;
+	point.y = transform.position.y;
 		
 	transform.LookAt(point);
-
-	Midpoint =((currentposition - point) * 0.5f) + point;
+	
 	camerapoint.transform.position = transform.position;
-
-	// camerapoint.transform.position = Vector3.MoveTowards(camerapoint.transform.position, Midpoint, .03);
-
 	debuggyyy.position = targetmouse;
 
 
@@ -52,14 +56,14 @@ function Update () {	//TODO: Edge cases
 }
 
 function compare(a:float, b:float, c:float) {
-	distance1 = Mathf.Abs(b - a);
-	distance2 = Mathf.Abs(c - a);
+	var distance1 = Mathf.Abs(b - a);
+	var distance2 = Mathf.Abs(c - a);
 	return distance1 > distance2;
 }
 
 function getRaycastArray() {	//TODO: Ignore self
 	var hits : RaycastHit[];
-	hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition));
+	hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, LayerFilter);
 	if (DEBUG) {
 		for(var hit in hits) {
 			//Safely add more debuggyyys
