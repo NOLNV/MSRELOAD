@@ -32,13 +32,13 @@ function Update () {
 			Gun = null;
 		}
 	} else {
-		if (false) { ///player collides with gun
-			if (nextPickup < Time.time /* && GunColliding == OldGun */) {
+		/*if (false) { ///player collides with gun
+			if (nextPickup < Time.time /* && GunColliding == OldGun ) {
 				//Pick the old gun up
 			} else {
 				//Pick any other gun up
 			}
-		}
+		}*/
 	}
 }
 

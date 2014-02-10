@@ -8961,7 +8961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 6
   Child: {fileID: 400000, guid: 9ba19e6343b2b694894e76190fd54abc, type: 2}
-  activated: 1
+  activated: 0
   Timer: 0
 --- !u!23 &918196188
 Renderer:
@@ -13525,9 +13525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcba3389153aa4040b42e8d66afa2591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debuggyyy: {fileID: 176029924}
-  camerapoint: {fileID: 121263637}
-  currentposition: {fileID: 12330812}
+  crossHair: {fileID: 176029924}
+  cameraController: {fileID: 121263637}
+  player: {fileID: 12330812}
   DEBUG: 1
 --- !u!1 &1477590509
 GameObject:
