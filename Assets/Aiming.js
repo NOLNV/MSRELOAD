@@ -18,8 +18,24 @@ function Start () {
 function Update () {	//TODO: Edge cases
 	//set up mouse ray
 	var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-	var hit = getRaycast(ray);
+	var hits = getRaycastArray(ray);
 	
+	//check if there's enemies behind any obstacle and player has LoS on them. (door)
+	for (hit in hits) {
+		if(hit.collider.CompareTag(Tags.enemy)) {
+			var losHitE : RaycastHit;
+			var losDirE : Vector3 = hit.point - player.position;
+			if (DEBUG == true) { Debug.DrawRay(player.position, losDirE, Color.green); }
+			Physics.Raycast(player.position, losDirE, losHitE, Mathf.Infinity, layerFilter);
+			if(losHitE.collider == hit.collider) {
+				target = losHitE.point;
+				setCrossHair(target);
+				return;
+			}
+		}
+	}
+	
+	var hit = hits[hits.Length-1];
 	//set up line of sight raycast variables
 	var losHit : RaycastHit;
 	var losDir : Vector3 = hit.point - player.position;
@@ -46,7 +62,6 @@ function Update () {	//TODO: Edge cases
 			//is lineofsight hitting the ceiling?
 			if(losHit.normal == Vector3.down) {
 				//Try aiming below obstacle
-				var hits = getRaycastArray(ray);//
 				target = hit.point;
 				for ( newHit in hits ) {
 					//Hits closer to the player's Y axis favorable
@@ -66,7 +81,7 @@ function Update () {	//TODO: Edge cases
 function CheckForEnemy(hit : RaycastHit, losHit : RaycastHit) : boolean {
 	if(hit.collider.CompareTag(Tags.enemy)) {
 		if(losHit.collider == hit.collider) {
-			target = hit.point;
+			target = losHit.point;
 			setCrossHair(target);
 			return true;
 		}
@@ -126,6 +141,7 @@ function getRaycastArray(ray : Ray) : RaycastHit[] {
 			rayOrigin = hit.point;
 		}
 	}
+	SortRaycastHitsArray.SortByDistance(hits);
 	return hits;
 }
 

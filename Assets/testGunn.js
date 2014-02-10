@@ -29,6 +29,7 @@ function Update () {
 	}
 }
 function OnParticleCollision (other : GameObject) {
+	if(other.CompareTag(Tags.enemy))
 		other.collider.SendMessage("ApplyDamage", damage); 
 }
 
