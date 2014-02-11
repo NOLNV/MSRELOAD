@@ -52,6 +52,7 @@
      <Compile Include="Assets\SmoothFollow1.js" />
      <Compile Include="Assets\Spawner.js" />
      <Compile Include="Assets\findground.js" />
+     <Compile Include="Assets\findgroundmobz.js" />
      <Compile Include="Assets\gunHolder.js" />
      <Compile Include="Assets\testGunn.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />

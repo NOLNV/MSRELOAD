@@ -2,13 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SimpleMobAI.js">
     <Files>
-      <File FileName="Assets\Aiming.js" Line="37" Column="102" />
+      <File FileName="Assets\SimpleMobAI.js" Line="29" Column="3" />
+      <File FileName="Assets\Aiming.js" Line="1" Column="1" />
       <File FileName="Assets\SmoothFollow1.js" Line="1" Column="1" />
       <File FileName="Assets\CAMERA.js" Line="1" Column="1" />
       <File FileName="Assets\findground.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\General Scripts\DragRigidbody.js" Line="1" Column="1" />
-      <File FileName="Assets\testGunn.js" Line="26" Column="5" />
-      <File FileName="Assets\SimpleMobAI.js" Line="19" Column="1" />
+      <File FileName="Assets\testGunn.js" Line="1" Column="1" />
+      <File FileName="Assets\Spawner.js" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

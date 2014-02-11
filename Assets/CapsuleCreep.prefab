@@ -8,14 +8,32 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 33: {fileID: 3300000}
   - 136: {fileID: 13600000}
-  - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400002}
+  - 96: {fileID: 9600000}
   m_Layer: 9
   m_Name: CapsuleCreep
   m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400002}
+  - 33: {fileID: 3300000}
+  - 23: {fileID: 2300000}
+  - 95: {fileID: 9500000}
+  m_Layer: 0
+  m_Name: hoverhead
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,23 +45,39 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.39677572, z: 11.0164127}
-  m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
-  m_Children: []
+  m_LocalPosition: {x: -2.37282586, y: .404614687, z: 3.22674656}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children:
+  - {fileID: 400002}
   m_Father: {fileID: 0}
+--- !u!4 &400002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: .0818842649}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400000}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ca49380a71a2bb64c830d06bd421b9d1, type: 2}
+  - {fileID: 2100000, guid: 72a4c1f6b9de53145b1f173e9abaa794, type: 2}
+  - {fileID: 2100000, guid: 002bbb7ca3a6827438c9d28703845150, type: 2}
+  - {fileID: 2100000, guid: 1cb0a8e2c25c88440b91f7f7559bfd34, type: 2}
+  - {fileID: 2100000, guid: 03a7287354f8fc243a6443b9212cc9ec, type: 2}
+  - {fileID: 2100000, guid: b485aeb6f6562ee4a98217f6a019cad5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -57,8 +91,8 @@ MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 100002}
+  m_Mesh: {fileID: 4300000, guid: a2effab5197f5f74680a7f40c1f78ad1, type: 3}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -117,6 +151,62 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a2effab5197f5f74680a7f40c1f78ad1, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
+--- !u!96 &9600000
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 74bcba72c2286ce429281c86d5928418, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Time: 2
+  m_StartWidth: .100000001
+  m_EndWidth: .100000001
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 975644671
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 694182143
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 340149916
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 187181152
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 16777215
+  m_MinVertexDistance: .100000001
+  m_Autodestruct: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +222,19 @@ MonoBehaviour:
   Deathobject: {fileID: 400002, guid: 8cc504863c9c2b34ab0f5a0d8bdcf483, type: 2}
   speed: .00999999978
   prey: {fileID: 0}
+  hunting: 1
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9f51b4683dac84fa9ef3bee888dcaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shadow: {fileID: 400000, guid: 88e4de6305817e14499e452e91ca3e15, type: 2}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
