@@ -22,12 +22,13 @@ function Update () {	//TODO: Edge cases
 	
 	//check if there's enemies behind any obstacle and player has LoS on them. (door)
 	for (hit in hits) {
-		if(hit.collider.CompareTag(Tags.enemy)) {
+		var hit2 : RaycastResult = hit;
+		if(hit2.collider.CompareTag(Tags.enemy)) {
 			var losHitE : RaycastHit;
-			var losDirE : Vector3 = hit.point - player.position;
+			var losDirE : Vector3 = hit2.point - player.position;
 			if (DEBUG == true) { Debug.DrawRay(player.position, losDirE, Color.green); }
 			Physics.Raycast(player.position, losDirE, losHitE, Mathf.Infinity, layerFilter);
-			if(losHitE.collider == hit.collider) {
+			if(losHitE.collider == hit2.collider) {
 				target = losHitE.point;
 				setCrossHair(target);
 				return;
@@ -35,7 +36,8 @@ function Update () {	//TODO: Edge cases
 		}
 	}
 	
-	var hit = hits[hits.Length-1];
+	var hit : RaycastResult = hits[0];
+	
 	//set up line of sight raycast variables
 	var losHit : RaycastHit;
 	var losDir : Vector3 = hit.point - player.position;
@@ -78,7 +80,7 @@ function Update () {	//TODO: Edge cases
 	setCrossHair(target);
 }
 
-function CheckForEnemy(hit : RaycastHit, losHit : RaycastHit) : boolean {
+function CheckForEnemy(hit : RaycastResult, losHit : RaycastHit) : boolean {
 	if(hit.collider.CompareTag(Tags.enemy)) {
 		if(losHit.collider == hit.collider) {
 			target = losHit.point;
@@ -89,7 +91,7 @@ function CheckForEnemy(hit : RaycastHit, losHit : RaycastHit) : boolean {
 	return false;
 }
 
-function chooseByHeight(hit : RaycastHit) : boolean {
+function chooseByHeight(hit : RaycastResult) : boolean {
 	var distance1 = Mathf.Abs(target.y - player.position.y);
 	var distance2 = Mathf.Abs(hit.point.y - player.position.y);
 	var losHit : RaycastHit;
@@ -129,10 +131,9 @@ function getRaycast(ray : Ray) : RaycastHit {
 	return hit;
 }
 
-function getRaycastArray(ray : Ray) : RaycastHit[] {
+function getRaycastArray(ray : Ray) : Array {
 	var hits : RaycastHit[];
 	hits = Physics.RaycastAll(ray, Mathf.Infinity, layerFilter);
-//	hits.OrderBy(function(h : RaycastHit) { return h.distance; }).ToArray();
 	if (DEBUG) {
 		var rayOrigin = ray.origin;
 		for(var hit in hits) {
@@ -141,8 +142,8 @@ function getRaycastArray(ray : Ray) : RaycastHit[] {
 			rayOrigin = hit.point;
 		}
 	}
-	SortRaycastHitsArray.SortByDistance(hits);
-	return hits;
+	var hits2 = SortRaycastHitsArray.SortByDistance(hits);
+	return hits2;
 }
 
 function setCrossHair(vec : Vector3) {

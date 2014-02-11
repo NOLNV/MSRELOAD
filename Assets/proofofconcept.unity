@@ -3558,7 +3558,7 @@ GameObject:
   - 82: {fileID: 483055523}
   m_Layer: 9
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13877,6 +13877,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1460962625}
   - 95: {fileID: 1460962626}
+  - 114: {fileID: 1460962627}
   m_Layer: 0
   m_Name: Simplefacefemale
   m_TagString: Untagged
@@ -13912,6 +13913,21 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &1460962627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460962624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453e51730d29d5d418b802e85cfcc075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 20
+  Deathobject: {fileID: 0}
+  speed: .000300000014
+  prey: {fileID: 100030, guid: 2314ce3a3eecf4816bad3c9eca4de2e1, type: 2}
 --- !u!1 &1477590509
 GameObject:
   m_ObjectHideFlags: 0
@@ -18038,7 +18054,7 @@ GameObject:
   - 82: {fileID: 1930766404}
   m_Layer: 9
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
