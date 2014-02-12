@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Aiming.js" />
      <Compile Include="Assets\CAMERA.js" />
+     <Compile Include="Assets\CeilingFader.js" />
      <Compile Include="Assets\SimpleMobAI.js" />
      <Compile Include="Assets\SmoothFollow1.js" />
      <Compile Include="Assets\Spawner.js" />
@@ -60,6 +61,7 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Materials\Outline.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
