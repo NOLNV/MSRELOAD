@@ -7469,6 +7469,8 @@ GameObject:
   - 33: {fileID: 883852466}
   - 23: {fileID: 883852465}
   - 64: {fileID: 883852464}
+  - 65: {fileID: 883852468}
+  - 114: {fileID: 883852467}
   m_Layer: 8
   m_Name: Cube_005
   m_TagString: Untagged
@@ -7531,6 +7533,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 734279884}
   m_GameObject: {fileID: 883852462}
   m_Mesh: {fileID: 4300004, guid: f4f3800724b125243aa1bbf2d4c56701, type: 3}
+--- !u!114 &883852467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883852462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444f5ebeeb4abbf41981c4884b0abe37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2033162244}
+  isFaded: 0
+--- !u!65 &883852468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883852462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29, y: 50, z: 18.2600002}
+  m_Center: {x: 22.7899952, y: 38.7165298, z: 9.10999966}
 --- !u!1 &894200291
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,9 +17,10 @@ function Start () {
 
 function Update () {	//TODO: Edge cases
 	//set up mouse ray
+	setCrossHair(new Vector3());
 	var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 	var hits = getRaycastArray(ray);
-	
+	if(!hits.length) return;
 	//check if there's enemies behind any obstacle and player has LoS on them. (door)
 	for (hit in hits) {
 		var hit2 : RaycastResult = hit;
