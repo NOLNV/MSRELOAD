@@ -4,7 +4,7 @@ var player : GameObject;
 var isFaded = false;
 private var ren : MeshRenderer;
 function Start () {
-	ren = GetComponent(MeshRenderer);
+	ren = transform.parent.GetComponent(MeshRenderer);
 }
 
 function Update () {

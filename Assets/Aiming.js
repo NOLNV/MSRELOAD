@@ -27,7 +27,7 @@ function Update () {	//TODO: Edge cases
 		if(hit2.collider.CompareTag(Tags.enemy)) {
 			var losHitE : RaycastHit;
 			var losDirE : Vector3 = hit2.point - player.position;
-			if (DEBUG == true) { Debug.DrawRay(player.position, losDirE, Color.green); }
+			if (DEBUG == true) { Debug.DrawRay(player.position, losDirE, Color.yellow); }
 			Physics.Raycast(player.position, losDirE, losHitE, Mathf.Infinity, layerFilter);
 			if(losHitE.collider == hit2.collider) {
 				target = losHitE.point;
