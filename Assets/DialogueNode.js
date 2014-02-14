@@ -7,19 +7,20 @@ class DialogueNode {
 	var rewardFunc : String;
 	var tag : String;
 	var textTime : String;
-	var dialogOptions : Array;
+	var dialogOptions : ArrayList;
 	
 	function DialogueNode( a : String, b : String, c : String, d : String, e : String, f : String) {
 		title = a;
-		femText = b;
-		malText = c;
-		rewardFunc = d;
-		tag = e;
+		tag = b;
+		femText = c;
+		malText = d;
+		rewardFunc = e;
 		textTime = f;
-		dialogOptions = new Array();
+		dialogOptions = new ArrayList();
 	}
 	
 	function AddToResponses( a: String, b : String, c : String) {
-		dialogOptions.push(new DialogOption(a, b, c));
+		dialogOptions.Add(new DialogOption(a, b, c));
+		//Debug.Log(a + ": ADDED! to: " + title);
 	}
 }

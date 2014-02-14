@@ -3,10 +3,20 @@ import System.Text.RegularExpressions; // http://wiki.unity3d.com/index.php?titl
 
 public var scriptFile : TextAsset; // https://docs.unity3d.com/Documentation/ScriptReference/TextAsset.html
 
+public var player : GameObject;
+public var npcActor1 : GameObject;
+public var npcActor2 : GameObject;
+public var npcActor3 : GameObject;
+
+private var playerActor : ActorController;
+private var actor1 : ActorController;
+private var actor2 : ActorController;
+private var actor3 : ActorController;
+
 private var nodesHash : Hashtable;
 private var nodesArray: ArrayList;
 
-private var nodeRegex = "::\\s\\w+\\s(?:\\[.*\\])?\\r?\\n?(?:\\|[^\\|]*\\|)+\\r?\\n?(?:(?:(?:\\[\\[[^\\]]+\\]\\])\\r\\n)+)?"; //shit long and shit hard, dont tocuh or get punched
+private var nodeRegex = "::\\s\\w+\\s(?:\\[.*\\])?\\r?\\n?(?:\\|[^\\|]*\\|)+\\r?\\n?(?:(?:(?:\\[\\[[^\\]]+\\]\\])\\r?\\n?)+)?"; //shit long and shit hard, dont tocuh or get punched
 private var passageTitleRegex = "^::\\s(\\w+)\\s";
 private var tagRegex = "(?:\\[(.*)\\])?\\r?\\n?";
 private var femMessageRegex = "\\|([^\\|]*)\\|";
@@ -14,9 +24,12 @@ private var malMessageRegex = "\\|([^\\|]*)\\|";
 private var rewardFuncRegex = "\\|([^\\|]*)\\|";
 private var textTimeRegex = "\\|(\\d+\\.\\d+f)\\|";
 private var dialogOptionsRegex = "\\[\\[[^\\|]+\\|\\w+\\]\\]";
-private var responseTextRegex = "^\\[\\[([^\\(\\|]+)\\(?";
-private var responseFuncRegex = "(?:(.*)\\))?\\|";
+private var responseTextRegex = "^\\[\\[([^@\\|]+)@?";
+private var responseFuncRegex = "(?:([^@\\|]+)@?)?\\|";
 private var responseTitleRegex = "(\\w+)\\]\\]";
+
+private var dialogueInProgress = false;
+private var currentNode : DialogueNode;
 
 function Start () {
 	nodesHash = new Hashtable();
@@ -38,33 +51,97 @@ function Start () {
 		Debug.Log(femMessage.Groups[3].ToString());
 		Debug.Log(malMessage.Groups[4].ToString());
 		Debug.Log(rewardFunc.Groups[5].ToString());
-		Debug.Log(textTime.Groups[6].ToString());*/
+		Debug.Log(textTime.Groups[6].ToString());//*/
 		
 		var key = title.Groups[1].ToString();
-		nodesHash[key] = nodesArray.Add(new DialogueNode(
-											title.Groups[1].ToString(),
-											tag.Groups[2].ToString(),
-											femMessage.Groups[3].ToString(),
-											malMessage.Groups[4].ToString(),
-											rewardFunc.Groups[5].ToString(),
-											textTime.Groups[6].ToString())
-										);
+		var obj = new DialogueNode(
+									title.Groups[1].ToString(),
+									tag.Groups[2].ToString(),
+									femMessage.Groups[3].ToString(),
+									malMessage.Groups[4].ToString(),
+									rewardFunc.Groups[5].ToString(),
+									textTime.Groups[6].ToString()
+									);
 		for(item in dialogOptions) {
 			var dialog = item.ToString();
-			//Debug.Log(dialog);
 			var resText = Regex.Match(dialog, responseTextRegex);
 			var resFunc = Regex.Match(dialog, responseTextRegex + responseFuncRegex);
 			var resTitle = Regex.Match(dialog, responseTextRegex + responseFuncRegex + responseTitleRegex);
 			/*Debug.Log(resText.Groups[1].ToString());
 			Debug.Log(resFunc.Groups[2].ToString());
 			Debug.Log(resTitle.Groups[3].ToString());
-			Debug.Log(resText.Groups[1].Length);*/
-			var obj : DialogueNode = nodesArray[nodesHash[key]];
+			Debug.Log(resText.Groups[1].Length);//*/
 			obj.AddToResponses(resText.Groups[1].ToString(), resFunc.Groups[2].ToString(), resTitle.Groups[3].ToString());
+		}
+		nodesHash[key] = nodesArray.Add(obj);
+	}
+	
+	playerActor = player.GetComponentInChildren(ActorController);
+	if (npcActor1)
+		actor1 = npcActor1.GetComponentInChildren(ActorController);
+	if (npcActor2)
+		actor2 = npcActor2.GetComponentInChildren(ActorController);
+	if (npcActor3)
+		actor3 = npcActor3.GetComponentInChildren(ActorController);
+}
+
+function Awake() {
+}
+
+function Update () {
+	if(Input.GetKeyDown(KeyCode.G)){
+		actor1.Say("HELLO!");
+		StartDialogue();
+	}
+	if(dialogueInProgress) {
+		if(Input.GetKeyDown(KeyCode.Alpha1)) {Respond(currentNode.dialogOptions[0]);}
+		if(Input.GetKeyDown(KeyCode.Alpha2)) {Respond(currentNode.dialogOptions[1]);}
+		if(Input.GetKeyDown(KeyCode.Alpha3)) {Respond(currentNode.dialogOptions[2]);}
+	}
+}
+function Respond(respond : DialogOption) {
+	dialogueInProgress = false;
+	proceedDialogue(respond.target);
+}
+function StartDialogue() {
+	proceedDialogue("Start");
+}
+
+function proceedDialogue(nodeTitle : String) {
+	var node = getNode(nodeTitle);
+	if(node) {
+		var actor : ActorController = getActor(node.tag);
+		if(actor) {
+			actor.Say(getText(node.femText, node.malText));
+			currentNode = node;
+			dialogueInProgress = true;
+			for(var i = 0; i < node.dialogOptions.Count; i++) {
+				//fff get some kind of UI..
+				var options : DialogOption = node.dialogOptions[i];
+				Debug.Log("PRESS " + (1+i) + " TO CHOOSE: " + options.response);
+			}
 		}
 	}
 }
 
-function Update () {
-
+function getText(femText, malText) : String {
+	return femText;
 }
+
+function getActor(actor : String) : ActorController {
+	if(actor == "player") return playerActor;
+	if(actor == "actor1") return actor1;
+	if(actor == "actor2") return actor1;
+	if(actor == "actor3") return actor1; 
+	return null;
+}
+
+function getNode(node : String) : DialogueNode {
+	var obj : DialogueNode = nodesArray[nodesHash[node]];
+	return obj;
+}
+
+
+
+
+

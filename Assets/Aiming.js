@@ -68,7 +68,7 @@ function Update () {	//TODO: Edge cases
 				target = hit.point;
 				for ( newHit in hits ) {
 					//Hits closer to the player's Y axis favorable
-					if(chooseByHeight(newHit))
+					if(chooseByDistance(newHit))
 						return;
 				}
 			} else {
@@ -88,6 +88,21 @@ function CheckForEnemy(hit : RaycastResult, losHit : RaycastHit) : boolean {
 			setCrossHair(target);
 			return true;
 		}
+	}
+	return false;
+}
+
+function chooseByDistance(hit : RaycastResult) : boolean {
+	var distance1 = Vector3.Distance(target, player.position);
+	var distance2 = Vector3.Distance(hit.point, player.position);
+	var losHit : RaycastHit;
+	var losDir : Vector3 = hit.point - player.position;
+	Physics.Raycast(player.position, losDir, losHit, Mathf.Infinity, layerFilter);
+	if (DEBUG == true) { Debug.DrawRay(player.position, losDir, Color.yellow); }
+	if (CheckForEnemy(hit, losHit)) {
+		return true;
+	} else if (distance1 > distance2) {
+		target = losHit.point;
 	}
 	return false;
 }

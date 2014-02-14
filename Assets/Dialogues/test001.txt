@@ -1,47 +1,48 @@
-﻿:: Start [test1 test2 test3]
+﻿:: Start [actor1]
 |"If I knew you were coming, I would have baken you a cake."||"If I knew you were coming, I would have baken you a cake."||function(){}||5.0f|
-[["NORESPONSE"(2.0f)|start2]]
+[["NORESPONSE"@function(){}@|start2]]
 
 
-:: changedmind
+
+:: changedmind [actor1]
 |"That makes no sense."||"That makes no sense."||function(){}||2.0f|
-[["NORESPONSE"(2.0f)|changedmind2]]
+[["NORESPONSE"@function(){}@|changedmind2]]
 
 
 
-:: changedmind2
+:: changedmind2 [actor1]
 |"You know what this is worth, you know what I've gone through to retrieve this."||"You know what this is worth, you know what I've gone through to retrieve this."||function(){}||5.0f|
-[["NORESPONSE"(2.0f)|changedmind3]]
+[["NORESPONSE"@function(){}@|changedmind3]]
 
 
 
-:: changedmind3
+:: changedmind3 [actor1]
 |"What is it really you wanted."||"What is it really you wanted."||function(){}||3.0f|
 [["For you to do it"|youdoit]]
 [["I was joking, hand it over."|handitover]]
 
 
 
-:: youdoit
+:: youdoit [actor1]
 |"Me?! Are you out of your mind woman?"||"Me?! Are you out of your mind son?"||function(){}||4.0f|
-[["I won't tell you twice"(p.Roughness>5)|End1]]
+[["I won't tell you twice"@function(){}@|End1]]
 [["I was joking, hand it over."|handitover]]
 
 
 
-:: start2
+:: start2 [actor1]
 |"Well regardless, I've got the thing you've been bugging me for the past couple of months."||"Well regardless, I've got the thing you've been bugging me for the past couple of months."||function(){}||5.0f|
 [["No time like today, hand it over"|handitover]]
 [["I changed my mind"|changedmind]]
 
 
-:: handitover
+:: handitover [actor1]
 |"As you wish, kiddo. Take care."||"As you wish, kiddo. Take care."||function(){p.GiveItem(235);}||4.0f|
 [["Good luck old man."|End1]]
 
 
 
-:: End1 [function(b){shit();}]
+:: End1 [actor1]
 |"Godspeed."||"Godspeed."||function(){}||4.0f|
 
 
