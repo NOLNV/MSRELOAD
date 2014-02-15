@@ -1,6 +1,8 @@
 ﻿#pragma strict
 import System.Text.RegularExpressions; // http://wiki.unity3d.com/index.php?title=SimpleRegex#JavaScript_-_SimpleRegex.js
 
+public var dialogueInterface : GameObject;
+
 public var scriptFile : TextAsset; // https://docs.unity3d.com/Documentation/ScriptReference/TextAsset.html
 
 public var player : GameObject;
@@ -12,6 +14,8 @@ private var playerActor : ActorController;
 private var actor1 : ActorController;
 private var actor2 : ActorController;
 private var actor3 : ActorController;
+
+private var dialogueBox : DialogueBox;
 
 private var nodesHash : Hashtable;
 private var nodesArray: ArrayList;
@@ -83,6 +87,9 @@ function Start () {
 		actor2 = npcActor2.GetComponentInChildren(ActorController);
 	if (npcActor3)
 		actor3 = npcActor3.GetComponentInChildren(ActorController);
+		
+	dialogueBox = dialogueInterface.GetComponentInChildren(DialogueBox);
+	dialogueBox.dialogueController = gameObject.GetComponent(DialogueController);
 }
 
 function Awake() {
@@ -100,7 +107,15 @@ function Update () {
 	}
 }
 function Respond(respond : DialogOption) {
+	dialogueBox.Clear();
 	dialogueInProgress = false;
+	proceedDialogue(respond.target);
+}
+
+function RespondByNum(i : int) {
+	dialogueBox.Clear();
+	dialogueInProgress = false;
+	var respond : DialogOption = currentNode.dialogOptions[i];
 	proceedDialogue(respond.target);
 }
 function StartDialogue() {
@@ -118,7 +133,8 @@ function proceedDialogue(nodeTitle : String) {
 			for(var i = 0; i < node.dialogOptions.Count; i++) {
 				//fff get some kind of UI..
 				var options : DialogOption = node.dialogOptions[i];
-				Debug.Log("PRESS " + (1+i) + " TO CHOOSE: " + options.response);
+				dialogueBox.Add(options.response);
+				//Debug.Log("PRESS " + (1+i) + " TO CHOOSE: " + options.response);
 			}
 		}
 	}

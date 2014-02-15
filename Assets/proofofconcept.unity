@@ -15454,6 +15454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7578c73a6d6870848bdf1cf15d1a28d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueInterface: {fileID: 2022827662}
   scriptFile: {fileID: 4900000, guid: 8bac40b87278ca4448fc4cffe692e4d7, type: 3}
   player: {fileID: 2033162244}
   npcActor1: {fileID: 1349075646}
@@ -18829,7 +18830,7 @@ GUIText:
   m_FontStyle: 1
   m_Color:
     serializedVersion: 2
-    rgba: 4294942627
+    rgba: 4294961530
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!114 &1938129573
@@ -19209,6 +19210,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 734279884}
   m_GameObject: {fileID: 2020157874}
   m_Mesh: {fileID: 4300012, guid: f4f3800724b125243aa1bbf2d4c56701, type: 3}
+--- !u!1 &2022827662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2022827664}
+  - 114: {fileID: 2022827663}
+  m_Layer: 0
+  m_Name: DialogueBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2022827663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022827662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b875ee63cabb947af5919af774384a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueController: {fileID: 0}
+--- !u!4 &2022827664
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022827662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.9416151, y: -11.9694328, z: 7.62203121}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &2033162244
 GameObject:
   m_ObjectHideFlags: 0
