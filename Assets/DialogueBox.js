@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 public var dialogueController : DialogueController;
+public var customGuiStyle : GUIStyle;
 
 private var buttons : ArrayList;
 private var numButtons : int = 0;
@@ -14,7 +15,7 @@ function OnGUI() {
 	GUI.Box (Rect (10,10,100,90), "Loader Menu");
 		for(var i = 0; i < numButtons; i++) {
 			var butt : String = buttons[i];
-			if(GUI.Button(Rect (20,40*(i+1),800,20), butt)) {
+			if(GUI.Button(Rect (20,40*(i+1),800,20), butt, customGuiStyle)) {
 				dialogueController.RespondByNum(i);
 			}
 		}

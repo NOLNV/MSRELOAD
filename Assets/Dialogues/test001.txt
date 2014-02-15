@@ -1,18 +1,18 @@
 ﻿:: Start [actor1]
 |If I knew you were coming, I would have baken you a cake.||If I knew you were coming, I would have baken you a cake.||function(){}||5.0|
-[[NORESPONSE@function(){}@|start2]]
+[[NORESPONSE|start2]]
 
 
 
 :: changedmind [actor1]
 |That makes no sense.||That makes no sense.||function(){}||2.0|
-[[NORESPONSE@function(){}@|changedmind2]]
+[[NORESPONSE|changedmind2]]
 
 
 
 :: changedmind2 [actor1]
 |You know what this is worth, you know what I've gone through to retrieve this.||You know what this is worth, you know what I've gone through to retrieve this.||function(){}||5.0|
-[[NORESPONSE@function(){}@|changedmind3]]
+[[NORESPONSE|changedmind3]]
 
 
 
@@ -25,8 +25,9 @@
 
 :: youdoit [actor1]
 |Me?! Are you out of your mind woman?||Me?! Are you out of your mind son?||function(){}||4.0|
-[[I won't tell you twice@function(){}@|End1]]
+[[I won't tell you twice@function(){return true;}@|End1]]
 [[I was joking, hand it over.|handitover]]
+[[This will never show up.@function(){return false;}@|handitover]]
 
 
 
@@ -37,7 +38,7 @@
 
 
 :: handitover [actor1]
-|As you wish, kiddo. Take care.||As you wish, kiddo. Take care.||function(){}||4.0|
+|As you wish, kiddo. Take care.||As you wish, kiddo. Take care.||function(){Debug.Log("The cop gives you the item.");}||4.0|
 [[Good luck old man.|End1]]
 
 

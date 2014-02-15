@@ -129,6 +129,7 @@ function proceedDialogue(nodeTitle : String) {
 		var actor : ActorController = getActor(node.tag);
 		if(actor) {
 			actor.Say(getText(node.femText, node.malText));
+			ExecuteRewardFunction(node.rewardFunc);
 			currentNode = node;
 			dialogueInProgress = true;
 			if(node.dialogOptions.Count == 0) {
@@ -144,10 +145,15 @@ function proceedDialogue(nodeTitle : String) {
 			}
 			for(var i = 0; i < node.dialogOptions.Count; i++) {
 				var options : DialogOption = node.dialogOptions[i];
+				if(options.timeout != "") {
+					var func : Function = eval(options.timeout);
+					if(!func()) {
+						continue;
+					}
+				}
 				if(options.response != "NORESPONSE") {
 					dialogueBox.Add(options.response);
 				}else{
-					// if conditional returns true use that and exit out else keep going
 					var temp2 : float = float.Parse(node.textTime);
 					InvokeExtended("Respond", options, temp2);
 				}
@@ -158,6 +164,12 @@ function proceedDialogue(nodeTitle : String) {
 
 function getText(femText, malText) : String {
 	return femText;
+}
+
+function ExecuteRewardFunction(string : String) {
+	if(string == "") return;
+	var func : Function = eval(string);
+	func();
 }
 
 function getActor(actor : String) : ActorController {
