@@ -26,7 +26,7 @@ private var tagRegex = "(?:\\[(.*)\\])?\\r?\\n?";
 private var femMessageRegex = "\\|([^\\|]*)\\|";
 private var malMessageRegex = "\\|([^\\|]*)\\|";
 private var rewardFuncRegex = "\\|([^\\|]*)\\|";
-private var textTimeRegex = "\\|(\\d+\\.\\d+f)\\|";
+private var textTimeRegex = "\\|(\\d+\\.\\d+)\\|";
 private var dialogOptionsRegex = "\\[\\[[^\\|]+\\|\\w+\\]\\]";
 private var responseTextRegex = "^\\[\\[([^@\\|]+)@?";
 private var responseFuncRegex = "(?:([^@\\|]+)@?)?\\|";
@@ -90,6 +90,7 @@ function Start () {
 		
 	dialogueBox = dialogueInterface.GetComponentInChildren(DialogueBox);
 	dialogueBox.dialogueController = gameObject.GetComponent(DialogueController);
+	
 }
 
 function Awake() {
@@ -97,13 +98,13 @@ function Awake() {
 
 function Update () {
 	if(Input.GetKeyDown(KeyCode.G)){
-		actor1.Say("HELLO!");
 		StartDialogue();
 	}
 	if(dialogueInProgress) {
-		if(Input.GetKeyDown(KeyCode.Alpha1)) {Respond(currentNode.dialogOptions[0]);}
+		/*if(Input.GetKeyDown(KeyCode.Alpha1)) {Respond(currentNode.dialogOptions[0]);}
 		if(Input.GetKeyDown(KeyCode.Alpha2)) {Respond(currentNode.dialogOptions[1]);}
 		if(Input.GetKeyDown(KeyCode.Alpha3)) {Respond(currentNode.dialogOptions[2]);}
+		if(Input.GetKeyDown(KeyCode.Alpha4)) {Respond(currentNode.dialogOptions[3]);}*/
 	}
 }
 function Respond(respond : DialogOption) {
@@ -130,11 +131,26 @@ function proceedDialogue(nodeTitle : String) {
 			actor.Say(getText(node.femText, node.malText));
 			currentNode = node;
 			dialogueInProgress = true;
+			if(node.dialogOptions.Count == 0) {
+				if(node.textTime == "") {
+					actor.TimeMute(0.07f * getText(node.femText, node.malText).Length + 1.0f);
+				}  else {
+					var temp1 : float = parseFloat(node.textTime);
+					actor.TimeMute(temp1);
+				}
+				dialogueBox.Clear();
+				dialogueInProgress = false;
+				return;
+			}
 			for(var i = 0; i < node.dialogOptions.Count; i++) {
-				//fff get some kind of UI..
 				var options : DialogOption = node.dialogOptions[i];
-				dialogueBox.Add(options.response);
-				//Debug.Log("PRESS " + (1+i) + " TO CHOOSE: " + options.response);
+				if(options.response != "NORESPONSE") {
+					dialogueBox.Add(options.response);
+				}else{
+					// if conditional returns true use that and exit out else keep going
+					var temp2 : float = float.Parse(node.textTime);
+					InvokeExtended("Respond", options, temp2);
+				}
 			}
 		}
 	}

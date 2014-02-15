@@ -11,15 +11,14 @@ private var nextTime : float = Mathf.Infinity;
 function Start () {
 	gText = GetComponent(GUIText);
 	nextTime = Time.time + 4.0f;
-	textsList[0] = "My position is: " + transform.position;
 }
 
 function Update () {
 	gText.transform.position = Camera.main.WorldToViewportPoint(transform.parent.position + offset);
-	if(isSaying == true && nextTime > Time.time) {
+	if(isSaying == true) {
 		//text = RandomText();
 		gText.text = text;
-	} else Unsay();
+	}// else Unsay();
 }
 
 function RandomText() : String {
@@ -30,11 +29,15 @@ function RandomText() : String {
 function Say(line : String) {
 	isSaying = true;
 	text = line;
-	nextTime = Time.time + 0.07f * text.Length + 12.0f; // http://www.proz.com/forum/subtitling/170722-reading_speed_in_different_countries.html#1506281
+	//nextTime = Time.time + 0.07f * text.Length + 12.0f; // http://www.proz.com/forum/subtitling/170722-reading_speed_in_different_countries.html#1506281
 }
 
 function Unsay() {
 	isSaying = false;
 	text = "";
 	gText.text = "";
+}
+
+function TimeMute(secs : float) {
+	Invoke("Unsay", secs);
 }
