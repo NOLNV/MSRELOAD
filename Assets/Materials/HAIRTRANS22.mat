@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Simplefacefemale2
-  m_Shader: {fileID: 12, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: HAIRTRANS22
+  m_Shader: {fileID: 53, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,25 +17,18 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 106ac288077e0e54e98c543dcd44a391, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Illum
-        second:
-          m_Texture: {fileID: 2800000, guid: e1b68a91caacb504490059256b9888ca, type: 3}
+          m_Texture: {fileID: 2800000, guid: 10339eb87949cf1419ec424e7bf6ecb0, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
-          name: _Shininess
-        second: .501358032
+          name: _Cutoff
+        second: .0357142873
       data:
         first:
-          name: _EmissionLM
-        second: 0
+          name: _Shininess
+        second: .238947332
     m_Colors:
       data:
         first:
@@ -44,4 +37,4 @@ Material:
       data:
         first:
           name: _SpecColor
-        second: {r: .45588237, g: .355320096, b: .355320096, a: .603921592}
+        second: {r: .41911763, g: .41911763, b: .41911763, a: 0}

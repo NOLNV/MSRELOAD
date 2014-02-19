@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: b8d716dbb121f0c47983981f22d83654
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Afrohawk
+    100002: Arms
+    100004: bangs
+    100006: BipedRig
+    100008: boyish
+    100010: Eyeshirt
+    100012: Feet
+    100014: FingersL1
+    100016: FingersL2
+    100018: FingersR1
+    100020: FingersR2
+    100022: FlatTop
+    100024: FootL
+    100026: FootR
+    100028: Hands
+    100030: Head
+    100032: HeelL
+    100034: HeelR
+    100036: HumerusL
+    100038: HumerusR
+    100040: Jeans
+    100042: KanedaJacket
+    100044: Legs
+    100046: Lowerback
+    100048: LowerlegL
+    100050: LowerlegR
+    100052: Neck
+    100054: PalmL
+    100056: PalmR
+    100058: Pelvis
+    100060: PelvisL
+    100062: PelvisL_001
+    100064: PelvisL_002
+    100066: PelvisL_003
+    100068: PelvisL_004
+    100070: PelvisL_005
+    100072: PelvisL_006
+    100074: PelvisR
+    100076: PelvisR_001
+    100078: PelvisR_002
+    100080: PelvisR_003
+    100082: PelvisR_004
+    100084: PelvisR_005
+    100086: PelvisR_006
+    100088: RadiusL
+    100090: RadiusR
+    100092: ShoulderL
+    100094: ShoulderR
+    100096: //RootNode
+    100098: Skull
+    100100: Spine1
+    100102: Spine2
+    100104: ThumbL1
+    100106: ThumbL2
+    100108: ThumbR1
+    100110: ThumbR2
+    100112: ToesL
+    100114: ToesR
+    100116: Torso
+    100118: Tshirt
+    100120: UpperlegL
+    100122: UpperlegR
+    400000: Afrohawk
+    400002: Arms
+    400004: bangs
+    400006: BipedRig
+    400008: boyish
+    400010: Eyeshirt
+    400012: Feet
+    400014: FingersL1
+    400016: FingersL2
+    400018: FingersR1
+    400020: FingersR2
+    400022: FlatTop
+    400024: FootL
+    400026: FootR
+    400028: Hands
+    400030: Head
+    400032: HeelL
+    400034: HeelR
+    400036: HumerusL
+    400038: HumerusR
+    400040: Jeans
+    400042: KanedaJacket
+    400044: Legs
+    400046: Lowerback
+    400048: LowerlegL
+    400050: LowerlegR
+    400052: Neck
+    400054: PalmL
+    400056: PalmR
+    400058: Pelvis
+    400060: PelvisL
+    400062: PelvisL_001
+    400064: PelvisL_002
+    400066: PelvisL_003
+    400068: PelvisL_004
+    400070: PelvisL_005
+    400072: PelvisL_006
+    400074: PelvisR
+    400076: PelvisR_001
+    400078: PelvisR_002
+    400080: PelvisR_003
+    400082: PelvisR_004
+    400084: PelvisR_005
+    400086: PelvisR_006
+    400088: RadiusL
+    400090: RadiusR
+    400092: ShoulderL
+    400094: ShoulderR
+    400096: //RootNode
+    400098: Skull
+    400100: Spine1
+    400102: Spine2
+    400104: ThumbL1
+    400106: ThumbL2
+    400108: ThumbR1
+    400110: ThumbR2
+    400112: ToesL
+    400114: ToesR
+    400116: Torso
+    400118: Tshirt
+    400120: UpperlegL
+    400122: UpperlegR
+    2300000: Afrohawk
+    2300002: bangs
+    2300004: boyish
+    2300006: FlatTop
+    3300000: Afrohawk
+    3300002: bangs
+    3300004: boyish
+    3300006: FlatTop
+    4300000: bangs
+    4300002: boyish
+    4300004: FlatTop
+    4300006: Afrohawk
+    4300008: Hands
+    4300010: Feet
+    4300012: Jeans
+    4300014: Head
+    4300016: Tshirt
+    4300018: Legs
+    4300020: Arms
+    4300022: Torso
+    4300024: KanedaJacket
+    4300026: Eyeshirt
+    7400000: idle
+    7400002: walk
+    7400004: crack knuckles
+    7400006: smoke
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Arms
+    13700002: Eyeshirt
+    13700004: Feet
+    13700006: Hands
+    13700008: Head
+    13700010: Jeans
+    13700012: KanedaJacket
+    13700014: Legs
+    13700016: Torso
+    13700018: Tshirt
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: BipedRigAction
+      firstFrame: 45
+      lastFrame: 81
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Afrohawk
+        weight: 1
+      - path: Arms
+        weight: 1
+      - path: bangs
+        weight: 1
+      - path: boyish
+        weight: 1
+      - path: Eyeshirt
+        weight: 1
+      - path: Feet
+        weight: 1
+      - path: FlatTop
+        weight: 1
+      - path: Hands
+        weight: 1
+      - path: Hands/BipedRig
+        weight: 1
+      - path: Hands/BipedRig/Pelvis
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck/Skull
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1/FingersL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1/ThumbL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1/FingersR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1/ThumbR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003/PelvisL_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004/PelvisL_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL/ToesL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/HeelL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003/PelvisR_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004/PelvisR_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR/ToesR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/HeelR
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Jeans
+        weight: 1
+      - path: KanedaJacket
+        weight: 1
+      - path: Legs
+        weight: 1
+      - path: Torso
+        weight: 1
+      - path: Tshirt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk
+      takeName: BipedRigAction
+      firstFrame: 5
+      lastFrame: 21
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Afrohawk
+        weight: 1
+      - path: Arms
+        weight: 1
+      - path: bangs
+        weight: 1
+      - path: boyish
+        weight: 1
+      - path: Eyeshirt
+        weight: 1
+      - path: Feet
+        weight: 1
+      - path: FlatTop
+        weight: 1
+      - path: Hands
+        weight: 1
+      - path: Hands/BipedRig
+        weight: 1
+      - path: Hands/BipedRig/Pelvis
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck/Skull
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1/FingersL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1/ThumbL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1/FingersR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1/ThumbR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003/PelvisL_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004/PelvisL_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL/ToesL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/HeelL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003/PelvisR_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004/PelvisR_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR/ToesR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/HeelR
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Jeans
+        weight: 1
+      - path: KanedaJacket
+        weight: 1
+      - path: Legs
+        weight: 1
+      - path: Torso
+        weight: 1
+      - path: Tshirt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: crack knuckles
+      takeName: Default Take
+      firstFrame: 149
+      lastFrame: 193
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Afrohawk
+        weight: 1
+      - path: Arms
+        weight: 1
+      - path: bangs
+        weight: 1
+      - path: boyish
+        weight: 1
+      - path: Eyeshirt
+        weight: 1
+      - path: Feet
+        weight: 1
+      - path: FlatTop
+        weight: 1
+      - path: Hands
+        weight: 1
+      - path: Hands/BipedRig
+        weight: 1
+      - path: Hands/BipedRig/Pelvis
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck/Skull
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1/FingersL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1/ThumbL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1/FingersR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1/ThumbR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003/PelvisL_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004/PelvisL_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL/ToesL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/HeelL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003/PelvisR_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004/PelvisR_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR/ToesR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/HeelR
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Jeans
+        weight: 1
+      - path: KanedaJacket
+        weight: 1
+      - path: Legs
+        weight: 1
+      - path: Torso
+        weight: 1
+      - path: Tshirt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: smoke
+      takeName: Default Take
+      firstFrame: 205
+      lastFrame: 298
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Afrohawk
+        weight: 1
+      - path: Arms
+        weight: 1
+      - path: bangs
+        weight: 1
+      - path: boyish
+        weight: 1
+      - path: Eyeshirt
+        weight: 1
+      - path: Feet
+        weight: 1
+      - path: FlatTop
+        weight: 1
+      - path: Hands
+        weight: 1
+      - path: Hands/BipedRig
+        weight: 1
+      - path: Hands/BipedRig/Pelvis
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/Neck/Skull
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/PalmL/FingersL1/FingersL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderL/HumerusL/RadiusL/ThumbL1/ThumbL2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/PalmR/FingersR1/FingersR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/Lowerback/Spine1/Spine2/ShoulderR/HumerusR/RadiusR/ThumbR1/ThumbR2
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_001/PelvisL_003/PelvisL_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/PelvisL_002/PelvisL_004/PelvisL_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/FootL/ToesL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisL/UpperlegL/LowerlegL/HeelL
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_001/PelvisR_003/PelvisR_005
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/PelvisR_002/PelvisR_004/PelvisR_006
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/FootR/ToesR
+        weight: 1
+      - path: Hands/BipedRig/Pelvis/PelvisR/UpperlegR/LowerlegR/HeelR
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Jeans
+        weight: 1
+      - path: KanedaJacket
+        weight: 1
+      - path: Legs
+        weight: 1
+      - path: Torso
+        weight: 1
+      - path: Tshirt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
